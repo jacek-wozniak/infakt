@@ -1,0 +1,43 @@
+@import 'src/scss/mixins.scss';
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 378px;
+
+
+  &__element {
+    color: $accent-color;
+    font-size: 12px;
+    position: relative;
+    text-indent: -9999em;
+    transform: translatey(-100%);
+    animation-delay: -0.16s;
+
+    &,
+    &::before,
+    &::after {
+      border-radius: 50%;
+      width: 2.5em;
+      height: 2.5em;
+      @include loader('1.2s infinite both ease-in-out');
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+    }
+
+    &::before {
+      left: -3.5em;
+      animation-delay: -0.32s;
+    }
+
+    &::after {
+      left: 3.5em;
+    }
+  }
+}

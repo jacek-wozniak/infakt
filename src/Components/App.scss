@@ -1,0 +1,44 @@
+@import 'src/scss/mixins.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.app {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1272px;
+  width: calc(100% - 40px);
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: content-box;
+
+  @include for-size(phone-up) {
+    width: calc(100% - 10%);
+  }
+
+  @include for-size(tablet-up) {
+    width: calc(100% - 15%);
+  }
+}
+
+.button {
+  font-family: "Roboto", sans-serif;
+  border: 0;
+  border-radius: $space/2;
+  background-color: $blue50;
+  color: $blue600;
+  padding: $space/2 $space;
+  @include font(14, 20, 500);
+  cursor: pointer;
+
+  &:hover {
+    background-color: $blue-75;
+  }
+}

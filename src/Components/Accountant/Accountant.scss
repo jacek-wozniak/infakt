@@ -1,0 +1,53 @@
+@import 'src/scss/mixins.scss';
+
+.accountant {
+  border: 1px solid $gray50;
+  border-radius: $space/2;
+  padding: $space*1.5;
+
+  &__top-bar {
+    display: flex;
+    align-items: center;
+    grid-gap: $space;
+  }
+
+  &__avatar {
+    grid-row: 1/3;
+    border-radius: $space/2;
+    margin-bottom: auto;
+  }
+
+  &__introduce {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    @include font(16, 24);
+    color: $gray800;
+  }
+
+  &__name {
+    @include font(24, 32, 700);
+    color: $black;
+  }
+
+  &__label {
+    margin-top: $space*1.5;
+    @include font(14, 20);
+    color: $gray800;
+  }
+
+  &__info {
+    color: $black;
+    @include font(16, 24);
+
+    &--underline {
+      text-decoration: underline;
+    }
+  }
+
+  &__more-info {
+    margin-top: $space*1.5;
+  }
+}
