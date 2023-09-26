@@ -2,4 +2,21 @@
 
 .topbar {
   margin-top: $space*3;
+  display: flex;
+
+  &__navigation {
+    margin-left: auto;
+    display: flex;
+    grid-gap: $space;
+  }
+
+  &__link {
+    color: $black;
+    text-decoration: none;
+    padding: $space/4 $space/2;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

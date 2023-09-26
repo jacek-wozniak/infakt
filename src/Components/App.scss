@@ -1,4 +1,4 @@
-@import 'src/scss/mixins.scss';
+@import '../scss/mixins';
 
 * {
   margin: 0;
@@ -41,4 +41,8 @@ body {
   &:hover {
     background-color: $blue-75;
   }
+}
+
+.section-header {
+  margin-top: $space*4;
 }
